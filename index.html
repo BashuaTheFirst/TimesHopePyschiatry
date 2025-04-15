@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Times hope psychiatry</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f2cc035e0d.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="/Images/Logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header"><b>Home</b></a></li>
+                <li><a href="#about"><b>About</b></a></li>
+                <li><a href="#services"><b>Services</b></a></li>
+                <li><a href="#contact"><b>Contact</b></a></li>
+                <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Psychiatric Nurse Practitioner</p>
+            <h1>Hi, I'm <span></span> <br>Tomi Adebisi Tijani</h1>
+        </div>
+    </div>
+</div>    
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/Tomi Tijani.jpg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I’m Tomi Adebisi Tijani, a board-certified Psychiatric-Mental Health Nurse Practitioner (PMHNP-BC) with a Master of Science in Nursing (MSN). With years of experience in mental health care, I am dedicated to providing compassionate, evidence-based treatment to help individuals achieve their best mental well-being.
+
+                    My approach is holistic and patient-centered, ensuring that each individual receives care tailored to their unique needs, experiences, and values. I believe in building a strong therapeutic relationship founded on trust, empathy, and collaboration. Whether you’re navigating anxiety, depression, ADHD, bipolar disorder, or other mental health challenges, I am here to guide and support you with personalized treatment plans.
+                    
+                    Committed to diversity and inclusion, I strive to create a safe and welcoming space where everyone feels heard and respected. Mental health is a journey, and I am honored to walk this path with you, helping you regain balance, build resilience, and embrace a healthier, more fulfilling life.</p>
+                         
+            </div>
+        </div>
+    </div>
+</div> 
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-capsules"></i>
+                <h2>Anxiety & Depression Treatment</h2>
+                <p>Specialized care for mood and anxiety disorders.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-file-prescription"></i>
+                <h2>Medication Management</h2>
+                <p>Personalized treatment plans, including medication support.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-comment-medical"></i>
+                <h2>Therapeutic Interventions </h2>
+                <p>Evidence-based approaches to managing mental health conditions.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-clipboard-list"></i>
+                <h2>Psychiatric Evaluations</h2>
+                <p>In-depth assessments to understand your mental health needs.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-bars-progress"></i>
+                <h2>ADHD & Bipolar Disorder Management</h2>
+                <p>Tailored strategies for focus, stability, and well-being.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-hospital-user"></i><i class="fa-solid fa-headset"></i>
+                <h2>Stress & Trauma Support</h2>
+                <p>Helping individuals cope with past and present stressors.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-hands-holding-child"></i>
+                <h2>Holistic & Lifestyle-Based Care</h2>
+                <p>Incorporating self-care, wellness, and stress management into treatment.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-users-rays"></i>
+                <h2>Diversity & Inclusive Care</h2>
+                <p>Culturally competent support for individuals from all backgrounds.</p>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>Timeshopepsychiatry@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+1 (914) 315-9665</p>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+/**
+ * Removes the "active-link" class from all links in the page
+ * which are labeled by class name "tab-links", so that
+ * they do not appear as selected.
+ */
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openMenu(){
+        sidemenu.style.right = "0";
+    }
+    function closeMenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwjuqnPw9J0VcUTUEVUre2er0ytBfPt-xwbH8pTsnJyYPOyqJpSWpd8rcfFxbJQEdT7Ww/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            form.reset
+            setTimeout(() => {
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
